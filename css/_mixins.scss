@@ -1,0 +1,33 @@
+@use "root" as *;
+
+@mixin grid($val) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+	gap: 2rem;
+}
+@mixin titleText($titleSize) {
+	font-size: $titleSize;
+	color: $black;
+	text-transform: capitalize;
+}
+@mixin graphText($graphSize) {
+	font-size: $graphSize;
+	color: $orange-light;
+	line-height: 2;
+}
+
+@mixin iconsBox() {
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	font-size: 2rem;
+	background-color: $orange-light;
+	color: $black;
+	cursor: pointer;
+	text-align: center;
+
+	&:hover {
+		background: $black;
+		color: $white;
+	}
+}
