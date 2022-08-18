@@ -156,6 +156,9 @@ section {
   color: #f2662c;
 }
 
+.home {
+  padding: 0;
+}
 .home .slide {
   min-height: 60rem;
   display: flex;
@@ -163,40 +166,33 @@ section {
   position: relative;
   background-size: cover !important;
   background-position: center !important;
-  border-radius: 1rem;
 }
 .home .slide::before {
   content: "";
   position: absolute;
-  top: 2rem;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, #e9ecef, transparent);
+  background: linear-gradient(180deg, #141617, transparent);
 }
 .home .slide .content {
   width: 50rem;
   position: relative;
 }
 .home .slide .content h3 {
+  font-family: "BrunoAce";
+  color: white;
   font-size: 6rem;
   color: #000;
   text-transform: capitalize;
   text-transform: uppercase;
 }
 .home .slide .content p {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: #dd8e6b;
   line-height: 2;
   padding: 1rem 0;
-}
-.home .swiper-button-next {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-.home .swiper-button-prev {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
 }
 .home .swiper-button-next,
 .home .swiper-button-prev {
@@ -256,6 +252,7 @@ section {
   transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
 }
 .header.active {
+  background: #141617;
   padding: 1.5rem 11%;
   box-shadow: 0px 12px 17px 2px hsla(0deg, 0%, 0%, 0.14), 0px 5px 22px 4px hsla(0deg, 0%, 0%, 0.12), 0px 7px 8px -4px hsla(0deg, 0%, 0%, 0.2);
 }

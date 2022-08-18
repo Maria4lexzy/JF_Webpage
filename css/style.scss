@@ -99,7 +99,8 @@ section {
 	}
 }
 .home {
-	// background: yellow;
+	padding: 0;
+
 	.slide {
 		min-height: 60rem;
 		display: flex;
@@ -107,40 +108,35 @@ section {
 		position: relative;
 		background-size: cover !important;
 		background-position: center !important;
-		border-radius: 1rem;
 
 		&::before {
 			content: "";
 			position: absolute;
-			top: 2rem;
+			top: 0;
 			left: 0;
 			height: 100%;
 			width: 100%;
-			background: linear-gradient(90deg, $gray-200, transparent);
+			background: linear-gradient(180deg, $dark-gray, transparent);
 		}
+
 		.content {
 			width: 50rem;
 			position: relative;
 
 			h3 {
+				font-family: "BrunoAce";
+				color: white;
 				@include titleText(6rem);
 				text-transform: uppercase;
 			}
 			p {
-				@include graphText(1.4rem);
+				@include graphText(1.7rem);
 				// line-height: 1.5rem;
 				padding: 1rem 0;
 			}
 		}
 	}
-	.swiper-button-next {
-		border-top-right-radius: 0.5rem;
-		border-bottom-right-radius: 0.5rem;
-	}
-	.swiper-button-prev {
-		border-top-left-radius: 0.5rem;
-		border-bottom-left-radius: 0.5rem;
-	}
+
 	.swiper-button-next,
 	.swiper-button-prev {
 		top: initial;
@@ -196,7 +192,7 @@ section {
 	background: transparent;
 	transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
 	&.active {
-		// background: $dark-gray;
+		background: $dark-gray;
 		padding: 1.5rem 11%;
 		box-shadow: $box-shadow-intense;
 	}
