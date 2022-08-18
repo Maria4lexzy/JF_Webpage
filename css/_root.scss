@@ -1,11 +1,12 @@
 $orange: #f2662c;
 $orange-light: #dd8e6b;
 $gray: #424242;
-$dark-gray: #212529;
+$dark-gray: #141617;
 $white: #fff;
 
 $off-white: #f2eaef;
-
+$charcoal: #36454f;
+$slate-gray: #3d4849;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
@@ -20,6 +21,15 @@ $secondary: $gray;
 
 $gradient-light: rgb(217, 98, 0);
 $gradient-dark: rgb(227, 147, 9);
+$box-shadow: 0 0.5rem 1rem rgba($dark-gray, 0.25);
 
-$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+$box-shadow-medium:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */ 0px 4px 5px 0px hsla(0, 0%, 0%, 0.14),
+	0px 1px 10px 0px hsla(0, 0%, 0%, 0.12), 0px 2px 4px -1px hsla(0, 0%, 0%, 0.2);
+$box-shadow-intense:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */ 0px 12px 17px 2px
+		hsla(0, 0%, 0%, 0.14),
+	0px 5px 22px 4px hsla(0, 0%, 0%, 0.12), 0px 7px 8px -4px hsla(0, 0%, 0%, 0.2);
+
+// $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 $border: 0.1rem solid rgba(0, 0, 0, 0.3);

@@ -29,9 +29,6 @@
     top: 99%;
     left: 0;
     right: 0;
-    background: var(--white);
-    border-top: var(--border);
-    border-bottom: var(--border);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: 0.2s linear;
@@ -73,7 +70,65 @@
   transition: 0.2s linear;
 }
 
+body {
+  margin: 0;
+}
+
+.bg {
+  -webkit-animation: slide 12s ease-in-out infinite alternate;
+          animation: slide 12s ease-in-out infinite alternate;
+  background-image: linear-gradient(60deg, #f2662c 50%, #141617 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+}
+
+.bg3 {
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+
+.content-bg {
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  left: 50%;
+  padding: 10vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
 html {
+  background-image: url("/img/topography.svg");
   font-size: 65%;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -99,17 +154,19 @@ section {
 }
 
 .heading {
+  font-family: "BrunoAce";
+  text-align: center;
+  color: #fff !important;
   margin-bottom: 3rem;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #000;
   text-transform: capitalize;
-  padding-left: 1rem;
-  border-left: solid 5px #f2662c;
+}
+.heading span {
+  font-family: "BrunoAce";
+  color: #f2662c;
 }
 
-.home {
-  padding: 0;
-}
 .home .slide {
   min-height: 60rem;
   display: flex;
@@ -121,7 +178,7 @@ section {
 .home .slide::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 2rem;
   left: 0;
   height: 100%;
   width: 100%;
@@ -153,7 +210,7 @@ section {
   height: 7rem;
   line-height: 7rem;
   font-size: 3rem;
-  background: #fff;
+  background: #141617;
 }
 .home .swiper-button-next:hover,
 .home .swiper-button-prev:hover {
@@ -172,7 +229,7 @@ section {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 3rem;
-  background: #000;
+  background: #141617;
   color: #fff;
   cursor: pointer;
   font-size: 1.7rem;
@@ -190,21 +247,26 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  padding: 1.5rem 10%;
+  box-shadow: 0px 4px 5px 0px hsla(0deg, 0%, 0%, 0.14), 0px 1px 10px 0px hsla(0deg, 0%, 0%, 0.12), 0px 2px 4px -1px hsla(0deg, 0%, 0%, 0.2);
+  padding: 2rem 12%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  background: #fff;
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
 }
-.header .logo {
-  font-size: 3.5rem;
-  color: #000;
-  text-transform: capitalize;
+.header.active {
+  padding: 1.5rem 11%;
+  box-shadow: 0px 12px 17px 2px hsla(0deg, 0%, 0%, 0.14), 0px 5px 22px 4px hsla(0deg, 0%, 0%, 0.12), 0px 7px 8px -4px hsla(0deg, 0%, 0%, 0.2);
 }
-.header .logo span {
-  color: #f2662c;
+.header .logo img {
+  width: 110%;
+  height: auto;
+}
+.header .logo img.active {
+  width: 50%;
+  height: auto;
 }
 .header .navbar a {
   font-size: 2rem;
@@ -234,16 +296,18 @@ section {
   display: none;
 }
 .header .navbar {
+  font-family: "BrunoAce";
   position: absolute;
   top: 99%;
   left: 0;
   right: 0;
-  background: #fff;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: 0.2s linear;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: all 0.4s cubic-bezier(0.1, 0.6, 0.2, 0.5);
 }
 .header .navbar.active {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -259,7 +323,6 @@ section {
   top: 0;
   right: 0;
   width: 34rem;
-  background: #fff;
   height: 100%;
   text-align: center;
   z-index: 1100;
@@ -365,7 +428,6 @@ section {
 }
 .about .box-container .box {
   text-align: center;
-  background: #e9ecef;
   padding: 3rem 2rem;
 }
 .about .box-container .box h3 {
@@ -380,9 +442,6 @@ section {
   padding-top: 2rem;
 }
 
-.services {
-  background-color: #dd8e6b;
-}
 .services .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -392,7 +451,7 @@ section {
   text-align: center;
   padding: 3rem;
   background: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(20, 22, 23, 0.25);
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
 }
 .services .box-container .box:hover img {
@@ -523,7 +582,7 @@ section {
   text-align: center;
   padding: 2rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(20, 22, 23, 0.25);
 }
 .pricing .box-container .box i {
   font-size: 2rem;
@@ -560,9 +619,6 @@ section {
   line-height: 2;
 }
 
-.contact {
-  background: #000;
-}
 .contact .heading {
   color: #fff;
 }
@@ -577,7 +633,6 @@ section {
 }
 .contact .row form {
   flex: 1 1 41rem;
-  background: #fff;
   padding: 2rem;
 }
 .contact .row form h3 {
@@ -592,9 +647,10 @@ section {
   font-size: 1.6rem;
   color: #343a40;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-color: #f2662c;
 }
 .contact .row form .box:focus {
-  border-color: #f2662c;
+  border-color: green;
 }
 .contact .row form textarea {
   height: 15rem;
@@ -616,5 +672,5 @@ section {
   padding-top: 1rem;
 }
 .footer .credit span {
-  color: var(--yellow);
+  color: #f2662c;
 }/*# sourceMappingURL=style.css.map */

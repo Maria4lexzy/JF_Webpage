@@ -1,8 +1,11 @@
 let navbar = document.querySelector('.header .navbar');
+let navbarHeader = document.querySelector('.header');
+
 let contactInfo = document.querySelector('.contact-info ');
 
 document.querySelector('#menu-btn').onclick = () => {
 	navbar.classList.toggle('active');
+	// navbarHeader.classList.toggle('active');
 }
 
 
@@ -15,10 +18,19 @@ document.querySelector('#close-contact-info').onclick = () => {
 	contactInfo.classList.remove('active');
 }
 
+function navEffect() {
+	var navElement = document.getElementsByClassName("header");
+	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+		navElement[0].classList.add("active");
 
+	} else {
+		navElement[0].classList.remove("active")
+
+	}
+}
 window.onscroll = () => {
 	navbar.classList.remove('active');
-
+	navEffect();
 }
 
 var swiper = new Swiper(".home-slider", {
