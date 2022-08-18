@@ -21,13 +21,13 @@
 	width: 5rem;
 	line-height: 5rem;
 	font-size: 2rem;
-	background-color: $orange-light;
-	color: $black;
+	// background-color: $orange-light;
+	color: $orange;
 	cursor: pointer;
 	text-align: center;
 
 	&:hover {
-		background: $black;
+		// background: $black;
 		color: $white;
 	}
 }
