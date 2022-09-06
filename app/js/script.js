@@ -1,10 +1,25 @@
-let navbar = document.querySelector('.header .navbar');
+let navbar = document.querySelector('.header__navbar');
 let navbarHeader = document.querySelector('.header');
-
-let contactInfo = document.querySelector('.contact-info ');
+let contactInfo = document.querySelector('.contact-info');
+let menuClickCounter = 0;
 
 document.querySelector('#menu-btn').onclick = () => {
-	navbar.classList.toggle('active');
+
+
+
+	if (menuClickCounter % 2 == 0) {
+		navbar.classList.add('active');
+		navbar.classList.remove('in-active');
+		menuClickCounter = menuClickCounter + 1;
+
+	}
+	else {
+		navbar.classList.add('in-active');
+		navbar.classList.remove('active');
+		menuClickCounter = menuClickCounter + 1;
+
+		menuClickCounter = 0;
+	}
 	// navbarHeader.classList.toggle('active');
 }
 
@@ -12,10 +27,19 @@ document.querySelector('#menu-btn').onclick = () => {
 document.querySelector('#info-btn').onclick = () => {
 	console.log("hello here")
 	contactInfo.classList.add('active');
+	contactInfo.classList.remove('in-active');
+	console.log(contactInfo)
+
+
 }
 
 document.querySelector('#close-contact-info').onclick = () => {
 	contactInfo.classList.remove('active');
+	console.log(contactInfo)
+	contactInfo.classList.add('in-active');
+
+
+
 }
 
 function navEffect() {
@@ -54,43 +78,6 @@ var swiper = new Swiper(".reviews-slider", {
 		},
 		991: {
 			slidesPerView: 3,
-		},
-	},
-});
-
-var swiper = new Swiper(".blogs-slider", {
-	loop: true,
-	grabCursor: true,
-	spaceBetween: 20,
-	breakpoints: {
-		640: {
-			slidesPerView: 1,
-		},
-		768: {
-			slidesPerView: 2,
-		},
-		991: {
-			slidesPerView: 3,
-		},
-	},
-});
-
-var swiper = new Swiper(".logo-slider", {
-	loop: true,
-	grabCursor: true,
-	spaceBetween: 20,
-	breakpoints: {
-		450: {
-			slidesPerView: 2,
-		},
-		640: {
-			slidesPerView: 3,
-		},
-		768: {
-			slidesPerView: 4,
-		},
-		1000: {
-			slidesPerView: 5,
 		},
 	},
 });

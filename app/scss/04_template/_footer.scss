@@ -1,0 +1,18 @@
+.footer {
+	text-align: center;
+	padding-bottom: 10rem;
+
+	.links .btn {
+		margin: 0.5rem;
+	}
+
+	.credit {
+		@include titleText(2rem);
+		margin-top: 2rem;
+		padding-top: 1rem;
+
+		span {
+			color: $orange;
+		}
+	}
+}

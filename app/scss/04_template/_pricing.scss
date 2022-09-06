@@ -1,0 +1,57 @@
+.pricing {
+	// background-color: $orange-light;
+	color: $white;
+
+	.box-container {
+		@include grid(30rem);
+
+		.box {
+			background-color: $dark-gray;
+			color: $white;
+			text-align: center;
+			padding: 2rem;
+			border: $border;
+			box-shadow: $box-shadow-intense;
+			border-radius: 0.9rem;
+			i {
+				font-size: 2rem;
+				color: $white;
+				height: 7rem;
+				line-height: 7rem;
+				margin-bottom: 1rem;
+				background: $orange;
+				border-radius: 50%;
+				width: 7rem;
+				box-shadow: $box-shadow-intense;
+			}
+			h3 {
+				@include titleText(2rem);
+				font-weight: 400;
+				padding: 2rem 0;
+				color: $white;
+			}
+			.price {
+				padding: 1rem 0;
+				@include titleText(5rem);
+				color: $white;
+
+				span {
+					font-size: 2rem;
+					color: $orange;
+				}
+			}
+			.btn {
+				&:hover {
+					color: $white;
+				}
+			}
+			.list {
+				padding: 1rem 0;
+				p {
+					@include graphText(1.4rem);
+					color: $orange;
+				}
+			}
+		}
+	}
+}

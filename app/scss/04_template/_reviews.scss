@@ -1,0 +1,45 @@
+.reviews {
+	.slide {
+		p {
+			padding: 1.5rem;
+			background: $dark-gray;
+			color: $white;
+			position: relative;
+			margin-bottom: 3rem;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1rem;
+				left: 2rem;
+				height: 2rem;
+				width: 2rem;
+				background-color: $dark-gray;
+				box-shadow: $box-shadow-medium;
+				transform: rotate(45deg);
+			}
+		}
+		.user {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+		}
+		img {
+			height: auto;
+			width: 15%;
+		}
+		h3 {
+			@include titleText(1.5rem);
+			color: $white;
+			font-weight: 400;
+		}
+		.stars {
+			padding-top: 0.5rem;
+
+			i {
+				font-size: 1.4rem;
+				color: $white;
+			}
+		}
+	}
+}

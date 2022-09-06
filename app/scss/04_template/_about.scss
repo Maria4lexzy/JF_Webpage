@@ -1,0 +1,46 @@
+.about {
+	color: $white;
+
+	.row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 3rem;
+		.video {
+			flex: 1 1 41rem;
+			video {
+				width: 100%;
+			}
+		}
+		.content {
+			flex: 1 1 41rem;
+			h3 {
+				@include graphText(3.5rem);
+				color: $white;
+			}
+			p {
+				@include graphText(1.5rem);
+				padding: 1rem;
+				color: $white;
+			}
+		}
+	}
+	.box-container {
+		margin-top: 3rem;
+		@include grid(16rem);
+		align-items: flex-end;
+
+		.box {
+			text-align: center;
+			// background: $gray-200;
+			padding: 3rem 2rem;
+			h3 {
+				@include graphText(4rem);
+			}
+			p {
+				@include graphText(2rem);
+				padding-top: 2rem;
+			}
+		}
+	}
+}

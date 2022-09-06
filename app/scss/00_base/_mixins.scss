@@ -1,4 +1,5 @@
-@use "root" as *;
+// @use "../root" as *;
+@import "colors";
 
 @mixin grid($val) {
 	display: grid;
@@ -6,16 +7,22 @@
 	gap: 2rem;
 }
 @mixin titleText($titleSize) {
+	// font-family: BrunoAce;
+
 	font-size: $titleSize;
 	color: $black;
 	text-transform: capitalize;
 }
 @mixin graphText($graphSize) {
 	font-size: $graphSize;
-	color: $orange-light;
+	color: $orange;
 	line-height: 2;
 }
-
+@mixin transformScale($size: 1) {
+	transform: scale($size);
+	-ms-transform: scale($size);
+	-webkit-transform: scale($size);
+}
 @mixin iconsBox() {
 	height: 5rem;
 	width: 5rem;

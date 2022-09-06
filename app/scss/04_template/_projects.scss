@@ -1,0 +1,60 @@
+.projects {
+	// background-color: $black;
+	.heading {
+		color: $white;
+	}
+
+	.box-container {
+		@include grid(30rem);
+		border-radius: 0.9rem;
+
+		.box {
+			border-radius: 0.9rem;
+
+			cursor: initial;
+
+			&:hover .image img {
+				transform: scale(1.1);
+			}
+			.image {
+				height: 40rem;
+				overflow: hidden;
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+					border-top-left-radius: 0.9rem;
+					border-top-right-radius: 0.9rem;
+				}
+			}
+			.content {
+				display: flex;
+				gap: 5rem;
+				background: $white;
+				justify-content: space-between;
+				border-bottom-left-radius: 0.3rem;
+				border-bottom-right-radius: 0.3rem;
+				.info {
+					padding: 1rem 2rem;
+					h3 {
+						@include titleText(1.7rem);
+					}
+					p {
+						@include graphText(1.5rem);
+					}
+				}
+				i {
+					border-top-left-radius: 0.5rem;
+					border-bottom-left-radius: 0.3rem;
+					width: 7.7rem;
+					font-size: 3rem;
+					background: $orange;
+					color: $white;
+					cursor: pointer;
+					text-align: center;
+					line-height: 6.5rem;
+				}
+			}
+		}
+	}
+}

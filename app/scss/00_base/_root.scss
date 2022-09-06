@@ -1,0 +1,78 @@
+@import "colors";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+// @font-face {
+// 	font-family: "BrunoAce";
+// 	src: url(../../fonts/Bruno_Ace_Regular.ttf) format("truetype");
+// 	font-weight: normal;
+// }
+font-face {
+	font-family: "BrunoAce";
+	src: url("../../fonts/BrunoAceRegular.ttf") format("truetype");
+}
+:root {
+	// font-family: BrunoAce;
+}
+
+.custom-font {
+	// font-family: BrunoAce;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	.bg {
+		animation: slide 12s ease-in-out infinite alternate;
+		background-image: linear-gradient(60deg, $orange 50%, $dark-gray 50%);
+		bottom: 0;
+		left: -50%;
+		opacity: 0.5;
+		position: fixed;
+		right: -50%;
+		top: 0;
+		z-index: -1;
+	}
+
+	.bg2 {
+		animation-direction: alternate-reverse;
+		animation-duration: 16s;
+	}
+
+	.bg3 {
+		animation-duration: 20s;
+	}
+}
+
+html {
+	// background-image: url("/img/topography.svg");
+	background-color: #0a090b;
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23512f0f' fill-opacity='0.19' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+	font-size: 65%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 7rem;
+	scrollbar-width: thin;
+	scrollbar-color: $primary $black;
+	&::-webkit-scrollbar-thumb {
+		background-color: $primary;
+		&:hover {
+			background: $secondary;
+		}
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background: $black;
+	}
+}
+section {
+	padding: 5rem 10%;
+}
