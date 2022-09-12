@@ -20,18 +20,11 @@
 	-ms-transform: scale($size);
 	-webkit-transform: scale($size);
 }
-@mixin iconsBox() {
-	height: 5rem;
-	width: 5rem;
-	line-height: 5rem;
-	font-size: 2rem;
-	// background-color: $orange-light;
+@mixin iconsBox($dim, $fontSize) {
+	height: $dim;
+	width: $dim;
+	font-size: $fontSize;
 	color: $orange;
 	cursor: pointer;
 	text-align: center;
-
-	&:hover {
-		// background: $black;
-		color: $white;
-	}
 }

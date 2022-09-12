@@ -1,4 +1,4 @@
-.contact-info {
+.contact-menu {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -7,14 +7,15 @@
 	height: 100%;
 	text-align: center;
 	z-index: 1100;
-	padding: 0 2rem;
-	padding-top: 5rem;
+	padding: 0 24px;
+	padding-top: 48px;
+
 	display: none;
 	@include swingAnimation();
 	box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.6);
 
 	&.active {
-		box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.6);
+		box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.45);
 		display: block;
 	}
 	&.in-active {
@@ -26,33 +27,43 @@
 		top: 4rem;
 		right: 6rem;
 		cursor: pointer;
-		font-size: 3rem;
+		font-size: 32px;
 		color: $orange;
-		margin-bottom: 2rem;
-		transition: all 0.2s linear;
-
+		transition: all 0.2s $transition-cubic;
+		// @include iconsBox(70px, 32px);
 		&:hover {
 			transform: rotate(90deg);
 		}
+		@include for-tablet-landscape-down {
+			font-size: 24px;
+		}
 	}
-	.content-info {
-		padding: 8px 40px;
+	&__content {
+		padding: 8px 16px;
+		margin-top: 40px;
 		.info {
-			padding: 0.8rem 0;
+			padding: 8px 0;
 			i {
-				@include iconsBox();
-				margin-bottom: 0.2rem;
+				@include iconsBox(40px, 24px);
+				margin-bottom: -8px;
+
+				@include for-tablet-landscape-down {
+					margin-bottom: -40px;
+				}
 			}
 			p {
-				@include graphText(2rem);
+				@include for-tablet-landscape-down {
+					@include graphText(16px);
+				}
+
+				@include graphText(24px);
 				font-family: "Work Sans", sans-serif;
 				letter-spacing: 2px;
-				font-weight: 500;
 				cursor: pointer;
 				color: $white;
 				position: relative;
-
 				transition: border-color 0.4s ease-in-out;
+
 				&::after {
 					content: "";
 					position: absolute;
@@ -73,25 +84,40 @@
 
 		.share {
 			padding-top: 5rem;
-			// background: red;
+
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 			justify-content: space-around;
+
 			a {
-				@include iconsBox();
-				// margin: 0, 3rem;
-				border-radius: 14px;
+				@include iconsBox(70px, 32px);
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				border-radius: $border-radius__medium;
+				color: rgba($color: $primary, $alpha: 0.85);
 				background: linear-gradient(145deg, #151819, #121415);
-				box-shadow: 6px 6px 12px #090a0b, -6px -6px 12px #1f2223;
-				font-size: 3rem;
-				color: $white;
-				transition: color 0.2s linear, box-shadow 0.9s linear;
+				box-shadow: 8px 8px 16px #090a0a, -8px -8px 16px #1f2224;
+				border: 2px solid rgba($color: #202120, $alpha: 0.12);
+
+				&::before {
+					align-self: center;
+				}
 				&:hover {
-					color: $orange;
-					border-radius: 14px;
+					color: $primary;
 					background: #141617;
-					box-shadow: inset 6px 6px 12px #090a0b, inset -6px -6px 12px #1f2223;
+					box-shadow: inset 8px 8px 16px #090a0a, inset -8px -8px 16px #1f2224;
+					border: 2px solid rgba($color: #202120, $alpha: 0.55);
+				}
+
+				@include for-tablet-landscape-down {
+					@include iconsBox(48px, 24px);
+				}
+
+				@include for-tablet-portrait-down {
+					// @include iconsBox(24px, 16px);
 				}
 			}
 		}

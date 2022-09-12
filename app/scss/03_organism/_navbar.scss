@@ -84,7 +84,7 @@
 
 	&__icons {
 		div {
-			@include iconsBox();
+			@include iconsBox(32px, 24px);
 			margin-left: 8px;
 		}
 		#menu-btn {

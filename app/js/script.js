@@ -1,7 +1,7 @@
 let navbar = document.querySelector('.header__navbar');
 let navLinks = document.querySelectorAll('nav a');
 let navbarHeader = document.querySelector('.header');
-let contactInfo = document.querySelector('.contact-info');
+let contactInfo = document.querySelector('.contact-menu');
 const section_x = document.getElementsByTagName("section");
 
 let menuClickCounter = 0;
