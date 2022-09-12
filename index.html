@@ -21,6 +21,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
 		integrity="sha512-kwJUhJJaTDzGp6VTPBbMQWBFUof6+pv0SM3s8fo+E6XnPmVmtfwENK0vHYup3tsYnqHgRDoBDTJWoq7rnQw2+g=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link
+		href="https://www.dafontfree.net/embed/YnJ1bm8tYWNlLXJlZ3VsYXImZGF0YS8zMC9iLzE1NTg3Mi9CcnVubyBBY2UgUmVndWxhci50dGY"
+		rel="stylesheet" type="text/css" />
 	<!-- Custom css file -->
 	<link rel="stylesheet" href="dist/styles.css">
 </head>
@@ -39,11 +43,12 @@
 		<a href="#home" class="header__logo"><img src="app/img/JFLogo.svg" alt=""> </a>
 		<nav class="header__navbar in-active">
 			<!-- <a href="#home">Home</a>-->
-			<a class="nav-link" href="#services">Services</a>
-			<a class="nav-link" href="#projects">Projects</a>
-			<a class="nav-link" href="#pricing">Pricing</a>
+			<a class="nav-link activee" href="#home">Home</a>
 			<a class="nav-link" href="#about">About</a>
-			<a class="nav-link" href="#blog">Blogs</a>
+			<a class="nav-link " href="#services">Services</a>
+			<a class="nav-link" href="#projects">Projects</a>
+			<a class="nav-link" href="#reviews">Reviews</a>
+			<a class="nav-link" href="#pricing">Pricing</a>
 			<a class="nav-link" href="#contact">Contact</a>
 		</nav>
 		<div class="header__icons">
@@ -81,33 +86,33 @@
 	<!-- header section ends   -->
 
 	<!-- home section starts -->
-	<section class="home" id="home">
-		<div class="swiper home-slider">
+	<section class="home hero-bg " id="home">
+		<div class="swiper home__swiper">
 			<div class="swiper-wrapper">
-				<section class="swiper-slide slide" style="background:url(app/img/electrician.jpg) no-repeat ;">
-					<div class="content">
+				<div class="swiper-slide home__slide" style="background:url(app/img/electrician.jpg) no-repeat ;">
+					<div class="home__content">
 						<h3>Slide One</h3>
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, at!</p>
 						<a href="#about" class="btn">Get started</a>
 					</div>
-				</section>
-				<section class="swiper-slide slide" style="background:url(app/img/worker.jpg) no-repeat ;">
-					<div class="content">
+				</div>
+				<div class="swiper-slide home__slide" style="background:url(app/img/worker.jpg) no-repeat ;">
+					<div class="home__content">
 						<h3>Slide Two</h3>
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, at!</p>
 						<a href="#about" class="btn">Get started</a>
 					</div>
-				</section>
-				<section class="swiper-slide slide" style="background:url(app/img/worker.jpg) no-repeat ;">
-					<div class="content">
+				</div>
+				<div class="swiper-slide home__slide" style="background:url(app/img/worker.jpg) no-repeat ;">
+					<div class="home__content">
 						<h3>Slide Three</h3>
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, at!</p>
 						<a href="#about" class="btn">Get started</a>
 					</div>
-				</section>
+				</div>
 			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
+			<div class="home__btn swiper-button-prev"></div>
+			<div class="home__btn swiper-button-next"></div>
 		</div>
 
 
@@ -115,7 +120,7 @@
 	<!-- home section ends -->
 
 	<!-- about section starts -->
-	<section class="about" id="about">
+	<section class="about hero-bg  " id="about">
 		<h1 class="heading-title">about <span>Us</span></h1>
 		<div class="row">
 			<div class="video">
@@ -152,7 +157,7 @@
 	<!-- about section ends -->
 
 	<!-- services section starts -->
-	<section class="services" id="services">
+	<section class="services hero-bg " id="services">
 		<h1 class="heading-title">our <span>services</span></h1>
 		<div class="box-container">
 			<div class="box">
@@ -186,14 +191,9 @@
 	<!-- services section ends -->
 
 	<!-- Projects start -->
-
-
-	<section class="projects" id="projects">
-
+	<section class="projects hero-bg" id="projects">
 		<h1 class="heading-title"> our <span>projects</span> </h1>
-
 		<div class="box-container">
-
 			<a href="app/img/electrician.jpg" class="box">
 				<div class="image">
 					<img src="app/img/electrician.jpg" alt="">
@@ -206,7 +206,6 @@
 					<i class="fa-solid fa-magnifying-glass-plus"></i>
 				</div>
 			</a>
-
 			<a href="app/img/worker3.jpg" class="box">
 				<div class="image">
 					<img src="app/img/worker3.jpg" alt="">
@@ -219,7 +218,6 @@
 					<i class="fa-solid fa-magnifying-glass-plus"></i>
 				</div>
 			</a>
-
 			<a href="app/img/worker2.jpg" class="box">
 				<div class="image">
 					<img src="app/img/worker2.jpg" alt="">
@@ -232,16 +230,13 @@
 					<i class="fa-solid fa-magnifying-glass-plus"></i>
 				</div>
 			</a>
-
-
 		</div>
-
 	</section>
 
 	<!-- projects section ends -->
 
 	<!-- Review starts -->
-	<section class="reviews">
+	<section class="reviews hero-bg" id="reviews">
 		<h1 class="heading-title">Clients <span>Reviews</span></h1>
 		<div class="swiper reviews-slider">
 			<div class="swiper-wrapper">
@@ -267,7 +262,6 @@
 				<div class="swiper-slide slide">
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
 						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
-
 					</p>
 					<div class="user">
 						<img src="app/img/reviewer2.jpg" alt="reviewer image">
@@ -287,7 +281,6 @@
 				<div class="swiper-slide slide">
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
 						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
-
 					</p>
 					<div class="user">
 						<img src="app/img/reviewer3.jpg" alt="reviewer image">
@@ -307,7 +300,6 @@
 				<div class="swiper-slide slide">
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
 						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
-
 					</p>
 					<div class="user">
 						<img src="app/img/reviewer1.jpg" alt="reviewer image">
@@ -330,12 +322,9 @@
 	<!-- Review Ends -->
 	<!-- pricing section starts  -->
 
-	<section class="pricing" id="pricing">
-
+	<section class="pricing hero-bg  " id="pricing">
 		<h1 class="heading-title"> our <span>pricing</span> </h1>
-
 		<div class="box-container">
-
 			<div class="box">
 				<i class="fas fa-home"></i>
 				<h3>basic plan</h3>
@@ -347,7 +336,6 @@
 				</div>
 				<a href="#" class="btn">choose plan</a>
 			</div>
-
 			<div class="box">
 				<i class="fas fa-building"></i>
 				<h3>premium plan</h3>
@@ -359,7 +347,6 @@
 				</div>
 				<a href="#" class="btn">choose plan</a>
 			</div>
-
 			<div class="box">
 				<i class="fas fa-city"></i>
 				<h3>ultimate plan</h3>
@@ -371,16 +358,14 @@
 				</div>
 				<a href="#" class="btn">choose plan</a>
 			</div>
-
 		</div>
-
 	</section>
 
 	<!-- pricing section ends -->
 
 	<!-- contact section starts  -->
 
-	<section class="contact" id="contact">
+	<section class="contact  hero-bg" id="contact">
 
 		<h1 class="heading-title"> contact <span>us</span> </h1>
 

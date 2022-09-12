@@ -7,15 +7,12 @@
 	gap: 2rem;
 }
 @mixin titleText($titleSize) {
-	// font-family: BrunoAce;
-
+	font-family: "Bruno Ace";
 	font-size: $titleSize;
-	color: $black;
 	text-transform: capitalize;
 }
 @mixin graphText($graphSize) {
 	font-size: $graphSize;
-	color: $orange;
 	line-height: 2;
 }
 @mixin transformScale($size: 1) {

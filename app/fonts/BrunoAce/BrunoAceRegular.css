@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BrunoAceRegular';
+    src: url('fonts/BrunoAceRegular.eot');
+    src: url('fonts/BrunoAceRegular.eot') format('embedded-opentype'),
+         url('fonts/BrunoAceRegular.woff2') format('woff2'),
+         url('fonts/BrunoAceRegular.woff') format('woff'),
+         url('fonts/BrunoAceRegular.ttf') format('truetype'),
+         url('fonts/BrunoAceRegular.svg#BrunoAceRegular') format('svg');
+}
