@@ -1,41 +1,44 @@
 .about {
 	color: $white;
 
-	.row {
+	&__row {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 3rem;
-		.video {
+		& .video {
 			flex: 1 1 41rem;
 			video {
 				width: 100%;
 			}
 		}
-		background-color: rebeccapurple;
-		.content {
-			@include for-tablet-landscape-down {
-				// display: flex;
-				align-items: center;
-				text-align: center;
-			}
-			flex: 1 1 41rem;
+	}
 
-			h3 {
-				@include graphText(32px);
-				color: $white;
-			}
-			p {
-				@include graphText(24px);
-				color: $white;
+	&__content {
+		@include for-tablet-landscape-down {
+			// display: flex;
+			align-items: center;
+			text-align: center;
+		}
+		flex: 1 1 41rem;
+
+		h3 {
+			@include graphText(32px);
+			color: $white;
+		}
+		p {
+			@include graphText(24px);
+			color: $white;
+			@include for-tablet-landscape-down {
+				@include graphText(16px);
 			}
 		}
 	}
-	.box-container {
+	&__box-container {
 		margin-top: 24px;
 		@include grid(16rem);
 		align-items: flex-end;
-		background-color: $primary;
+
 		.box {
 			text-align: center;
 			// background: $gray-200;

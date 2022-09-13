@@ -14,6 +14,9 @@ button {
 	padding: 16px 24px;
 	color: $primary;
 	transition: 0.25s;
+	@include for-tablet-landscape-down {
+		font-size: 16px;
+	}
 
 	&:hover,
 	&:focus {

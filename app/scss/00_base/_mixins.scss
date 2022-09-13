@@ -4,7 +4,7 @@
 @mixin grid($val) {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
-	gap: 2rem;
+	gap: 2.4rem;
 }
 @mixin titleText($titleSize) {
 	font-family: "Bruno Ace";
@@ -41,3 +41,11 @@
 	backdrop-filter: blur(16px);
 	-webkit-backdrop-filter: blur(16px);
 }
+// loop
+
+// @each $button, $color in $colors {
+// 	.#{$button} {
+// 		--color: #{$color};
+// 		--hover: #{adjust-hue($color, 75deg)};
+// 	}
+// }

@@ -1,31 +1,32 @@
 .services {
 	// background-color: $orange-light;
 
-	.box-container {
+	&__box-container {
 		@include grid(25rem);
+	}
 
-		.box {
-			text-align: center;
-			padding: 3rem;
-			background: $white;
-			box-shadow: $box-shadow;
-			border: $border;
-			&:hover img {
-				transform: translateY(-1rem);
-			}
-			img {
-				height: 7rem;
-				margin-bottom: 0.5rem;
-				transition: 0.2s linear;
-			}
-			h3 {
-				@include titleText(1.7rem);
-				padding: 1rem 0;
-			}
-			p {
-				@include graphText(1.4rem);
-				padding: 1rem;
-			}
+	&__box {
+		text-align: center;
+		padding: 24px;
+		background: $white;
+		box-shadow: $box-shadow;
+		&:hover img {
+			transform: translateY(-1rem);
+		}
+		img {
+			height: 7rem;
+			margin-bottom: 0.5rem;
+			transition: 0.2s linear;
+		}
+		h3 {
+			@include titleText(24px);
+			color: $primary;
+			padding: 1rem 0;
+		}
+		p {
+			@include graphText(16px);
+			padding: 16px;
+			line-height: 24px;
 		}
 	}
 }
