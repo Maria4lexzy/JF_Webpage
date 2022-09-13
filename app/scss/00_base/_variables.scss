@@ -19,3 +19,8 @@ $border-short-orange: 0.3rem solid rgba(242, 102, 44, 0.8);
 $border: 0.1rem solid rgba(0, 0, 0, 0.3);
 
 $transition-cubic: cubic-bezier(0.1, 0.6, 0.2, 0.5);
+
+$transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
+
+// button hover
+$btn-hover: #{adjust-hue($primary, 35deg)};

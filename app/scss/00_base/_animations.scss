@@ -88,6 +88,7 @@
 	}
 }
 
+// animation for slides text and button
 @keyframes fadeInRight {
 	0% {
 		opacity: 0;
@@ -97,5 +98,13 @@
 	100% {
 		opacity: 1;
 		transform: translateX(0);
+	}
+}
+
+// button pulse
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 $btn-hover;
 	}
 }

@@ -1,13 +1,15 @@
 .heading-title {
 	font-family: "Bruno Ace";
 	text-align: center;
-	color: $white !important;
-	margin-bottom: 3rem;
-	@include titleText(4rem);
-	// padding-left: 1rem;
-	// border-left: solid 5px $orange;
+	color: $white;
+	margin-bottom: 64px;
+	@include titleText(64px);
+	@include titleText(40px);
+
+	@include for-tablet-landscape-down {
+	}
 	span {
-		font-family: "Bruno Ace";
+		// font-family: "Bruno Ace";
 		color: $orange;
 	}
 }

@@ -1,50 +1,23 @@
-.btn {
-	padding: 1rem 3rem;
-	background-color: transparent;
-	font-size: 1.7rem;
-	// animation: hue-rotate 10s linear infinite;
-	color: $white;
-	cursor: pointer;
-
-	text-decoration: none;
+.btn--pulse:hover,
+.btn--pulse:focus {
+	animation: pulse 1s;
+	box-shadow: 0 0 0 24px transparent;
+}
+// Basic button styles
+button {
+	background: none;
+	border: 2px solid;
+	font: inherit;
 	text-transform: uppercase;
-	width: 100%;
-	border: 0 solid;
-	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-	outline: 1px solid;
-	outline-color: rgba(255, 255, 255, 0.5);
-	outline-offset: 0px;
-	text-shadow: none;
-	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-	background: rgba($white, 0);
-	border-bottom: 1px solid;
-	color: $white;
-	line-height: 1.4;
-	padding: 0.25em;
-	text-decoration: none;
-	&:hover {
-		border: 1px solid;
-		box-shadow: inset 0 0 20px rgba(73, 42, 1, 0.4), 0 0 20px rgba(87, 74, 43, 0.636);
-		outline-color: rgba(255, 255, 255, 0);
-		outline-offset: 15px;
-		text-shadow: 1px 1px 2px #427388;
-		scale: (1.1);
-		background: rgba($primary, 1);
-		color: $white;
+	font-size: 24px;
+	margin: 16px 0;
+	padding: 16px 24px;
+	color: $primary;
+	transition: 0.25s;
+
+	&:hover,
+	&:focus {
+		border-color: $btn-hover;
+		color: #fff;
 	}
 }
-
-// a {
-// 	background: rgba($white, 0);
-// 	border-bottom: 1px solid;
-// 	color: $white;
-// 	line-height: 1.4;
-// 	padding: 0.25em;
-// 	text-decoration: none;
-// 	font-family: "Bruno Ace" !important;
-
-// 	&:hover {
-// 		background: rgba($primary, 1);
-// 		color: $white;
-// 	}
-// }
