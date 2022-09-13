@@ -48,6 +48,7 @@ document.querySelector('#close-contact-info').onclick = () => {
 function navEffect() {
 	var navElement = document.getElementsByClassName("header");
 	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+		console.log(document.body.scrollTop)
 		navElement[0].classList.add("active");
 
 	} else {
@@ -57,13 +58,11 @@ function navEffect() {
 }
 
 function scrollSpy() {
-	console.log("SCROLL SPY " + section_x.length);
 	for (var sec = 0; sec < section_x.length; sec++) {
 		let top = window.scrollY;
 		let offset = section_x[sec].offsetTop - 250;
 		let height = section_x[sec].offsetHeight;
 		let id = section_x[sec].getAttribute('id');
-		console.log(navLinks + "kslfmslflkj");
 		if (top >= offset && top < offset + height) {
 			navLinks.forEach(links => {
 				links.classList.remove('activee');
@@ -83,9 +82,9 @@ window.onscroll = () => {
 var swiper = new Swiper(".home__swiper", {
 	loop: true,
 	grabCursor: true,
-	autoplay: {
-		delay: 5000,
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// },
 	// navigation: {
 	// 	nextEl: ".home__btn-next",
 	// 	prevEl: ".home__btn-prev"
