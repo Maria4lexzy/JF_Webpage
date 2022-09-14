@@ -14,7 +14,7 @@
 			box-shadow: $box-shadow-intense;
 			border-radius: 0.9rem;
 			i {
-				font-size: 2rem;
+				font-size: 40px;
 				color: $white;
 				height: 7rem;
 				line-height: 7rem;
@@ -23,20 +23,23 @@
 				border-radius: 50%;
 				width: 7rem;
 				box-shadow: $box-shadow-intense;
+				@include for-tablet-landscape-down {
+					font-size: 32px;
+				}
 			}
 			h3 {
-				@include titleText(2rem);
+				@include titleText(32px);
 				font-weight: 400;
 				padding: 2rem 0;
 				color: $white;
 			}
 			.price {
 				padding: 1rem 0;
-				@include titleText(5rem);
+				@include titleText(48px);
 				color: $white;
 
 				span {
-					font-size: 2rem;
+					font-size: 24px;
 					color: $orange;
 				}
 			}
@@ -48,8 +51,11 @@
 			.list {
 				padding: 1rem 0;
 				p {
-					@include graphText(1.4rem);
+					@include graphText(24px);
 					color: $orange;
+					@include for-tablet-landscape-down {
+						line-height: 24px;
+					}
 				}
 			}
 		}
