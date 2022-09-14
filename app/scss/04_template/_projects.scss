@@ -4,7 +4,13 @@
 	color: $primary;
 
 	&__box-container {
-		@include grid(30rem);
+		// @include grid(30rem);
+		display: flex;
+		gap: 40px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
 	}
 
 	&__box {
@@ -14,8 +20,14 @@
 			transform: scale(1.1);
 		}
 		.image {
-			height: 40rem;
+			height: 480px;
 			overflow: hidden;
+			@include for-tablet-landscape-down {
+				height: 392px;
+			}
+			@include for-tablet-landscape-to-small-desktop {
+				height: 320px;
+			}
 			img {
 				transition: 0.2s linear;
 				height: 100%;
@@ -25,19 +37,34 @@
 		}
 		.content {
 			display: flex;
-			gap: 5rem;
-			background: $white;
+			// gap: 5rem;
+			background-color: $white;
 			justify-content: space-between;
 
 			.info {
-				padding: 1rem 2rem;
+				align-self: center;
+				padding-left: 24px;
 				h3 {
 					@include titleText(24px);
 					color: $primary;
+
+					@include for-tablet-landscape-down {
+						@include titleText(16px);
+					}
+					@include for-tablet-landscape-to-small-desktop {
+						@include titleText(16px);
+					}
 				}
 				p {
 					@include graphText(24px);
 					color: $dark-gray;
+					@include for-tablet-landscape-down {
+						@include graphText(16px);
+					}
+					@include for-tablet-landscape-to-small-desktop {
+						@include graphText(16px);
+						line-height: 16px;
+					}
 				}
 			}
 			i {

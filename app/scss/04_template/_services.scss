@@ -22,6 +22,9 @@
 			@include titleText(24px);
 			color: $primary;
 			padding: 1rem 0;
+			@include for-tablet-landscape-down {
+				@include titleText(16px);
+			}
 		}
 		p {
 			@include graphText(16px);

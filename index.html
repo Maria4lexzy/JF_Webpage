@@ -129,7 +129,7 @@
 	<section class="about hero-bg" id="about">
 		<h1 class="about__title heading-title">about <span>Us</span></h1>
 		<div class="about__row ">
-			<div class="video">
+			<div class="about__video">
 				<video src="app/img/const-video.mp4" loop muted autoplay></video>
 			</div>
 			<div class="about__content">
@@ -198,13 +198,15 @@
 	</section>
 	<!-- services section ends -->
 
+
+
 	<!-- Projects start -->
 	<section class="projects hero-bg" id="projects">
 		<h1 class="projects__title heading-title"> our <span>projects</span> </h1>
 		<div class="projects__box-container">
 			<a href="app/img/electrician.jpg" class=" projects__box">
 				<div class="image">
-					<img src="app/img/electrician.jpg" alt="">
+					<img src="app/img/worker3.jpg" alt="">
 				</div>
 				<div class="content">
 					<div class="info">
@@ -228,7 +230,19 @@
 			</a>
 			<a href="app/img/worker2.jpg" class=" projects__box">
 				<div class="image">
-					<img src="app/img/worker2.jpg" alt="">
+					<img src="app/img/worker3.jpg" alt="">
+				</div>
+				<div class="content">
+					<div class="info">
+						<h3>dream home</h3>
+						<p>construction, design</p>
+					</div>
+					<i class="fa-solid fa-magnifying-glass-plus"></i>
+				</div>
+			</a>
+			<a href="app/img/worker2.jpg" class=" projects__box">
+				<div class="image">
+					<img src="app/img/worker3.jpg" alt="">
 				</div>
 				<div class="content">
 					<div class="info">
@@ -368,10 +382,8 @@
 					<p>Lorem, ipsum dolor</p>
 					<p>Lorem, ipsum</p>
 				</div>
-				<button onclick="location.href='#'" class="button">
+				<button onclick="location.href='#'" class="btn--pulse">
 					Get Started
-					<div class="button__horizontal"></div>
-					<div class="button__vertical"></div>
 				</button>
 			</div>
 		</div>
@@ -381,29 +393,32 @@
 
 	<!-- contact section starts  -->
 
-	<section class="contact  hero-bg" id="contact">
+	<!-- <section class="contact  hero-bg" id="contact">
 
-		<h1 class="heading-title"> contact <span>us</span> </h1>
+		<h1 class="contact__title heading-title"> contact <span>us</span> </h1>
 
-		<div class="row">
+		<div class="contact__row">
 
-			<iframe
+			<iframe style="filter: invert(90%)"
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5639.489952549058!2d21.11462843813409!3d49.14640713640128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473e89f112962539%3A0xd4e9b33f0d6bca3b!2sSki%20Drienica!5e0!3m2!1sen!2shr!4v1660764159866!5m2!1sen!2shr"
-				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+				style="border:0;" allowfullscreen="" loading="lazy"
 				referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-			<form action="">
-				<h3>get in touch</h3>
-				<input type="text" placeholder="name" class="box">
-				<input type="email" placeholder="email" class="box">
-				<input type="number" placeholder="phone" class="box">
-				<textarea name="" placeholder="message" class="box" id="" cols="30" rows="10"></textarea>
-				<input type="submit" value="send message" class="btn">
-			</form>
-
+			<div class="contact__form-wrapper">
+				<form action="" id="contact-form">
+					<h3 class="div1">get in touch</h3>
+					<input type="text" placeholder="name" class="div2 contact__box">
+					<input type="text" placeholder="name" class="div3 contact__box">
+					<input type="email" placeholder="email" class="div4 contact__box">
+					<input type="number" placeholder="phone" class="div5 contact__box">
+					<textarea name="" placeholder="message" class="div6 contact__box" id="" cols="30"
+						rows="10"></textarea>
+				</form>
+				<button type="submit" value="Submit" form="contact-form" class="btn--pulse div6">
+					Get Started
+				</button>
+			</div>
 		</div>
-
-	</section>
+	</section> -->
 
 	<!-- contact section ends -->
 
@@ -446,7 +461,7 @@
 	<script type="text/javascript" src="app/js/script.js"></script>
 
 	<script>
-		lightGallery(document.querySelector('.projects .box-container'));
+		lightGallery(document.querySelector('.projects__box-container'));
 	</script>
 
 </body>

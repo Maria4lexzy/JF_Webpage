@@ -1,26 +1,42 @@
 .about {
 	color: $white;
+	// padding: 0 !important;
 
 	&__row {
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
-		gap: 3rem;
-		& .video {
-			flex: 1 1 41rem;
-			video {
-				width: 100%;
-			}
-		}
-	}
+		// flex-wrap: wrap;
+		gap: 40px;
+		justify-content: space-between;
+		flex-direction: row;
 
-	&__content {
 		@include for-tablet-landscape-down {
 			// display: flex;
 			align-items: center;
 			text-align: center;
+			flex-direction: column;
+			gap: 24px;
 		}
-		flex: 1 1 41rem;
+		@include for-tablet-landscape-to-small-desktop {
+			align-items: center;
+		}
+	}
+	&__video {
+		flex: 1 1 48rem;
+		@include for-tablet-landscape-down {
+			flex: 1 1 auto;
+		}
+		video {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__content {
+		flex: 1 1 40rem;
+		@include for-tablet-landscape-down {
+			flex: 1 1 auto;
+		}
 
 		h3 {
 			@include graphText(32px);
@@ -29,20 +45,31 @@
 		p {
 			@include graphText(24px);
 			color: $white;
+			line-height: 32px;
+			text-align: justify;
+			@include for-tablet-landscape-to-small-desktop {
+				@include graphText(16px);
+				line-height: 24px;
+			}
 			@include for-tablet-landscape-down {
 				@include graphText(16px);
+				padding: 24px;
 			}
 		}
 	}
 	&__box-container {
 		margin-top: 24px;
 		@include grid(16rem);
-		align-items: flex-end;
+		align-items: stretch;
 
 		.box {
 			text-align: center;
 			// background: $gray-200;
-			padding: 3rem 2rem;
+			padding: 16px 24px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
 			h3 {
 				@include graphText(4rem);
 			}

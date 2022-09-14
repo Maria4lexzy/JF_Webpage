@@ -24,3 +24,4 @@ $transition-cubic-fast: cubic-bezier(0.19, 1, 0.22, 1);
 
 // button hover
 $btn-hover: #{adjust-hue($primary, 35deg)};
+$card-shadow: 1px 8px $dark-gray;

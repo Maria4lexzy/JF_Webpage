@@ -9,13 +9,21 @@ button {
 	border: 2px solid;
 	font: inherit;
 	text-transform: uppercase;
-	font-size: 24px;
+	@include graphText(24px);
 	margin: 16px 0;
 	padding: 16px 24px;
 	color: $primary;
 	transition: 0.25s;
+	font-weight: 800;
+	@include for-tablet-landscape-to-small-desktop {
+		@include graphText(14px);
+		padding: 8px 16px;
+		// color: yellow;
+	}
+
 	@include for-tablet-landscape-down {
-		font-size: 16px;
+		@include graphText(14px);
+		padding: 8px 16px;
 	}
 
 	&:hover,
