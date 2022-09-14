@@ -117,8 +117,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="home__btn swiper-button-prev"></div>
-			<div class="home__btn swiper-button-next"></div>
+			<div id="home-swiper-prev" class="home__btn swiper-button-prev"></div>
+			<div id="home-swiper-next" class="home__btn swiper-button-next"></div>
 		</div>
 
 
@@ -259,14 +259,11 @@
 
 	<!-- Review starts -->
 	<section class="reviews hero-bg" id="reviews">
-		<h1 class="heading-title">Clients <span>Reviews</span></h1>
-		<div class="swiper reviews-slider">
+		<h1 class="reviews__title heading-title">Clients <span>Reviews</span></h1>
+		<div class="swiper reviews__swiper">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide slide">
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
-						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
-					</p>
-					<div class="user">
+				<div class="reviews__slide swiper-slide">
+					<div class="reviews__user">
 						<img src="app/img/reviewer1.jpg" alt="reviewer image">
 						<div class="info">
 							<h3>Jane Doe</h3>
@@ -278,17 +275,16 @@
 								<i class="fa-solid fa-star"></i>
 							</div>
 						</div>
-
 					</div>
-				</div>
-				<div class="swiper-slide slide">
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
 						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
 					</p>
-					<div class="user">
+				</div>
+				<div class="reviews__slide swiper-slide">
+					<div class="reviews__user">
 						<img src="app/img/reviewer2.jpg" alt="reviewer image">
 						<div class="info">
-							<h3>James Doe</h3>
+							<h3>Jane Doe</h3>
 							<div class="stars">
 								<i class="fa-solid fa-star"></i>
 								<i class="fa-solid fa-star"></i>
@@ -297,36 +293,16 @@
 								<i class="fa-solid fa-star"></i>
 							</div>
 						</div>
-
 					</div>
-				</div>
-				<div class="swiper-slide slide">
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
 						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
 					</p>
-					<div class="user">
-						<img src="app/img/reviewer3.jpg" alt="reviewer image">
-						<div class="info">
-							<h3>Drew Doe</h3>
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-							</div>
-						</div>
-
-					</div>
 				</div>
-				<div class="swiper-slide slide">
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
-						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
-					</p>
-					<div class="user">
+				<div class="reviews__slide swiper-slide">
+					<div class="reviews__user">
 						<img src="app/img/reviewer1.jpg" alt="reviewer image">
 						<div class="info">
-							<h3>Janet Doe</h3>
+							<h3>Jane Doe</h3>
 							<div class="stars">
 								<i class="fa-solid fa-star"></i>
 								<i class="fa-solid fa-star"></i>
@@ -335,10 +311,32 @@
 								<i class="fa-solid fa-star"></i>
 							</div>
 						</div>
-
 					</div>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
+						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
+					</p>
+				</div>
+				<div class="reviews__slide swiper-slide">
+					<div class="reviews__user">
+						<img src="app/img/reviewer1.jpg" alt="reviewer image">
+						<div class="info">
+							<h3>Jane Doe</h3>
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ab sint rerum modi error,
+						perferendis amet maxime in placeat. Nulla quam ipsa rem necessitatibus velit!
+					</p>
 				</div>
 			</div>
+			<div id="reviews-swiper-prev" class="reviews__btn swiper-button-prev"></div>
+			<div id="reviews-swiper-next" class="reviews__btn swiper-button-next"></div>
 		</div>
 	</section>
 	<!-- Review Ends -->

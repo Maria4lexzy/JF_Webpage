@@ -1,45 +1,73 @@
 .reviews {
-	.slide {
+	&__slide {
+		&.swiper-slide-next {
+			p {
+				//make color different
+			}
+		}
 		p {
-			padding: 1.5rem;
-			background: $dark-gray;
-			color: $white;
+			padding: 16px;
+			background-color: $white;
+			color: $dark-gray;
 			position: relative;
-			margin-bottom: 3rem;
+			margin-top: 24px;
+			line-height: 16px;
+			text-align: center;
+			@include graphText(24px);
 
 			&::before {
 				content: "";
 				position: absolute;
-				bottom: -1rem;
-				left: 2rem;
-				height: 2rem;
-				width: 2rem;
-				background-color: $dark-gray;
+				top: -16px;
+				left: 48px;
+				height: 32px;
+				width: 32px;
+				background-color: $white;
 				box-shadow: $box-shadow-medium;
 				transform: rotate(45deg);
+				z-index: -1;
 			}
 		}
-		.user {
-			display: flex;
-			align-items: center;
-			gap: 1.5rem;
-		}
+	}
+	&__user {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 16px;
 		img {
+			width: 35%;
 			height: auto;
-			width: 15%;
+			border: $border-radius__small;
 		}
-		h3 {
-			@include titleText(1.5rem);
-			color: $white;
-			font-weight: 400;
-		}
-		.stars {
-			padding-top: 0.5rem;
 
-			i {
-				font-size: 1.4rem;
-				color: $white;
+		.info {
+			h3 {
+				@include titleText(1.5rem);
+				color: $primary;
+				font-weight: 400;
 			}
+			.stars {
+				padding-top: 0.5rem;
+
+				i {
+					@include graphText(16px);
+					color: $orange;
+				}
+			}
+		}
+	}
+	&__btn {
+		transition: all 0.2s linear;
+		font-size: 40px;
+		padding: 16px;
+		color: $primary;
+		opacity: 0.7;
+		@include for-tablet-landscape-down {
+			display: none;
+		}
+		&:hover {
+			opacity: 1;
+			transform: scale(1.5);
 		}
 	}
 }

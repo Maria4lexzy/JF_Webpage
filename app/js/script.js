@@ -90,14 +90,18 @@ var swiper = new Swiper(".home__swiper", {
 	// 	prevEl: ".home__btn-prev"
 	// },
 	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev"
+		nextEl: "#home-swiper-next",
+		prevEl: "#home-swiper-prev"
 	},
 });
-var swiper = new Swiper(".reviews-slider", {
+var swiper = new Swiper(".reviews__swiper", {
 	loop: true,
 	grabCursor: true,
 	spaceBetween: 20,
+	navigation: {
+		nextEl: "#reviews-swiper-next",
+		prevEl: "#reviews-swiper-prev"
+	},
 	breakpoints: {
 		640: {
 			slidesPerView: 1,
