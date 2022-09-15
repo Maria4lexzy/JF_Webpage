@@ -390,51 +390,70 @@
 	<!-- pricing section ends -->
 
 	<!-- contact section starts  -->
-
-	<!-- <section class="contact  hero-bg" id="contact">
-
+	<section class=" contact  hero-bg" id="contact">
 		<h1 class="contact__title heading-title"> contact <span>us</span> </h1>
-
+		<p class="contact__subtitle">Leave us a review or send us information regarding your request</p>
 		<div class="contact__row">
-
-			<iframe style="filter: invert(90%)"
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5639.489952549058!2d21.11462843813409!3d49.14640713640128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473e89f112962539%3A0xd4e9b33f0d6bca3b!2sSki%20Drienica!5e0!3m2!1sen!2shr!4v1660764159866!5m2!1sen!2shr"
-				style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
-			<div class="contact__form-wrapper">
-				<form action="" id="contact-form">
-					<h3 class="div1">get in touch</h3>
-					<input type="text" placeholder="name" class="div2 contact__box">
-					<input type="text" placeholder="name" class="div3 contact__box">
-					<input type="email" placeholder="email" class="div4 contact__box">
-					<input type="number" placeholder="phone" class="div5 contact__box">
-					<textarea name="" placeholder="message" class="div6 contact__box" id="" cols="30"
-						rows="10"></textarea>
+			<div class="contact__column">
+				<iframe style="filter: invert(90%)"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5639.489952549058!2d21.11462843813409!3d49.14640713640128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473e89f112962539%3A0xd4e9b33f0d6bca3b!2sSki%20Drienica!5e0!3m2!1sen!2shr!4v1660764159866!5m2!1sen!2shr"
+					style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<div class="contact__column">
+				<form action="/action_page.php">
+					<label for="fname">First Name</label>
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+					<label for="lname">Last Name</label>
+					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+					<label for="city">City</label>
+					<select id="city" name="city">
+						<option value="australia">Sabinov</option>
+						<option value="canada">Presov</option>
+						<option value="usa">The other City</option>
+					</select>
+					<label for="subject">Subject</label>
+					<textarea id="subject" name="subject" placeholder="Your message goes here.."
+						style="height:120px"></textarea>
+					<!-- <input type="submit" value="Submit"> -->
 				</form>
 				<button type="submit" value="Submit" form="contact-form" class="btn--pulse div6">
 					Get Started
 				</button>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<!-- contact section ends -->
 
 	<!-- footer section starts  -->
 
 	<section class="footer">
+		<h3 class="footer__title">JF Sabinov</h3>
+		<p class="footer__subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui ipsa ducimus fugit
+			minus quae sed quo non doloremque corrupti hic? </p>
 
-		<!-- <div class="links">
-			<a class="btn" href="#home">home</a>
-			<a class="btn" href="#about">about</a>
-			<a class="btn" href="#services">services</a>
-			<a class="btn" href="#projects">projects</a>
-			<a class="btn" href="#pricing">pricing</a>
-			<a class="btn" href="#contact">contact</a>
-			<a class="btn" href="#blogs">blogs</a>
-		</div> -->
-
-		<div class="credit"> created by <span>Maria Failli</span> | <i class="fa-solid fa-copyright"></i>2022 </div>
+		<div class="footer__menu">
+			<div class="info">
+				<i class="fa-solid fa-envelope-open-text"></i>
+				<p>+421 323 454 543</p>
+			</div>
+			<div class="info">
+				<i class="fa-solid fa-envelope-open-text"></i>
+				<p>john.doe@gmail.com</p>
+			</div>
+			<div class="info">
+				<i class="fa-solid fa-location-dot"></i>
+				<p>Some Address in Sabinov 8700</p>
+			</div>
+			<div class="share">
+				<a href="#" class="fa-brands fa-facebook-f"></a>
+				<a href="#" class="fa-brands fa-facebook-messenger"></a>
+				<a href="#" class="fa-brands fa-instagram"></a>
+			</div>
+		</div>
+		<div class="footer__credit"> created by <span>Maria Failli</span> | <i class="fa-solid fa-copyright"></i>2022
+		</div>
 
 	</section>
 

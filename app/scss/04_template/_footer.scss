@@ -1,18 +1,118 @@
 .footer {
 	text-align: center;
-	padding-bottom: 10rem;
-
-	.links .btn {
-		margin: 0.5rem;
-	}
-
-	.credit {
-		@include titleText(2rem);
-		margin-top: 2rem;
-		padding-top: 1rem;
+	color: white;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: auto;
+	@include borderGlass();
+	&__credit {
+		@include titleText(24px);
+		margin-top: 16px;
 
 		span {
 			color: $orange;
+		}
+	}
+
+	&__title {
+		@include titleText(40px);
+	}
+
+	&__subtitle {
+		@include graphText(24px);
+	}
+
+	&__menu {
+		background-color: $dark-gray;
+		color: $white;
+		text-align: center;
+		padding: 24px;
+		box-shadow: $box-shadow-intense;
+		border-radius: 0.9rem;
+		color: $white;
+
+		padding: 8px 16px;
+		margin-top: 40px;
+		.info {
+			padding: 8px 0;
+			i {
+				@include iconsBox(40px, 24px);
+				margin-bottom: -8px;
+
+				@include for-tablet-landscape-down {
+					margin-bottom: -40px;
+				}
+			}
+			p {
+				@include for-tablet-landscape-down {
+					@include graphText(16px);
+				}
+
+				@include graphText(24px);
+				font-family: "Work Sans", sans-serif;
+				letter-spacing: 2px;
+				cursor: pointer;
+				color: $white;
+				position: relative;
+				transition: border-color 0.4s ease-in-out;
+
+				&::after {
+					content: "";
+					position: absolute;
+					border-top: 2px solid rgba(242, 102, 44, 0.2);
+					left: 35%;
+					bottom: 0;
+					width: 30%;
+					height: 0px;
+					transition: all 0.2s ease-in-out;
+				}
+				&:hover::after {
+					border-top: 2px solid rgba(242, 102, 44, 0.8);
+					width: 32%;
+					left: 34%;
+				}
+			}
+		}
+
+		.share {
+			padding: 48px;
+
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			a {
+				@include iconsBox(64px, 24px);
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				border-radius: $border-radius__medium;
+				color: rgba($color: $primary, $alpha: 0.85);
+				background: linear-gradient(145deg, #151819, #121415);
+				box-shadow: 8px 8px 16px #090a0a, -8px -8px 16px #1f2224;
+				padding: 24px;
+				border: 2px solid rgba($color: #202120, $alpha: 0.12);
+
+				&::before {
+					align-self: center;
+				}
+				&:hover {
+					color: $primary;
+					background: #141617;
+					box-shadow: inset 8px 8px 16px #090a0a, inset -8px -8px 16px #1f2224;
+					border: 2px solid rgba($color: #202120, $alpha: 0.55);
+				}
+
+				@include for-tablet-landscape-down {
+					@include iconsBox(48px, 24px);
+				}
+
+				@include for-tablet-portrait-down {
+					// @include iconsBox(24px, 16px);
+				}
+			}
 		}
 	}
 }

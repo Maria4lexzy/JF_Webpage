@@ -3,7 +3,7 @@
 	text-align: center;
 	color: $white;
 	margin: 48px 0 40px 0;
-	@include titleText(64px);
+	@include titleText(56px);
 
 	@include for-tablet-landscape-down {
 		@include titleText(40px);

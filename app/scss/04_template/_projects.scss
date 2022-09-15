@@ -10,7 +10,13 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-content: center;
-		justify-content: center;
+		justify-content: space-around;
+		@include for-tablet-landscape-down {
+			justify-content: center;
+		}
+		@include for-tablet-landscape-to-small-desktop {
+			justify-content: center;
+		}
 	}
 
 	&__box {
