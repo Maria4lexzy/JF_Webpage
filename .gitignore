@@ -3,3 +3,7 @@ app/vendor
 app/composer.lock
 package-lock.json
 dist/
+firebase-debug.log
+ui-debug.log
+functions/.env
+emulators/
